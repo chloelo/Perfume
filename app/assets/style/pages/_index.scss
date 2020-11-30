@@ -1,0 +1,114 @@
+// 響應式的字體大小：參考以下網址
+// https://medium.com/@wanjarunkel/using-bootstraps-new-responsive-font-sizes-feature-57abacd595ac
+// $enable-responsive-font-sizes: true; 把_variables.scss裡這個變數設定 true，套入 mixin font-size(xxrem) 即可
+
+.herobanner {
+  background: url("https://raw.githubusercontent.com/hexschool/webLayoutTraining1st/master/perfume-week6/index1.jpg")
+    no-repeat center / cover;
+  height: 480px;
+  @include desktop {
+    height: 870px;
+  }
+  .text {
+    max-width: 100%;
+    color: $white;
+    @include desktop {
+      max-width: 41.6666%;
+    }
+  }
+  .title {
+    @include font-size(40px);
+  }
+  .description {
+    @include font-size(24px);
+    font-weight: 300;
+  }
+  .btn {
+    font-size: 28px;
+    width: 100%;
+    @include desktop {
+      width: 80%;
+    }
+  }
+}
+.main-promo {
+  .img {
+    background-repeat: no-repeat;
+    background-size: cover;
+    min-height: 350px;
+    background-position: center;
+    @include desktop {
+      height: 555px;
+    }
+    &-01 {
+      background-image: url("https://raw.githubusercontent.com/hexschool/webLayoutTraining1st/master/perfume-week6/index2.jpg");
+    }
+    &-02 {
+      background-image: url("https://raw.githubusercontent.com/hexschool/webLayoutTraining1st/master/perfume-week6/index3.png");
+    }
+    &-03 {
+      background-image: url("https://raw.githubusercontent.com/hexschool/webLayoutTraining1st/master/perfume-week6/index4.jpg");
+      background-position: 10% 50%;
+    }
+    &-04 {
+      background-image: url("https://raw.githubusercontent.com/hexschool/webLayoutTraining1st/master/perfume-week6/index5.jpg");
+      min-height: 680px;
+      @include desktop {
+        height: 1080px;
+      }
+    }
+  }
+  .btn {
+    font-size: 20px;
+    width: 100%;
+  }
+}
+.list-selected {
+  background-color: #e0e0e0;
+  .img-wrap {
+    overflow: hidden;
+    min-height: 350px;
+
+    @include desktop {
+      height: 540px;
+    }
+  }
+  .card-img-top {
+    object-fit: cover;
+    width: 100%;
+    height: 100%;
+    transition: all 0.5s;
+  }
+  .sold-out {
+    position: relative;
+    &::before {
+      z-index: 2;
+      content: "";
+      position: absolute;
+      top: 0;
+      left: 0;
+      right: 0;
+      bottom: 0;
+      background-color: rgba($black, $alpha: 0.5);
+    }
+    .text {
+      z-index: 3;
+      position: absolute;
+      top: 50%;
+      left: 50%;
+      transform: translate(-50%, -50%);
+      color: $white;
+    }
+  }
+  .card {
+    background-color: transparent;
+    &:hover {
+      .card-img-top {
+        transform: scale(1.2);
+      }
+    }
+  }
+  .stretched-link {
+    color: $black;
+  }
+}

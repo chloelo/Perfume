@@ -1,0 +1,14 @@
+@mixin desktop {
+  @media screen and (min-width: 991px) {
+    @content;
+  }
+}
+@mixin pad {
+  @media screen and (min-width: 767px) {
+    @content;
+  }
+}
+
+@mixin txt-align($direction: center) {
+  text-align: $direction;
+}

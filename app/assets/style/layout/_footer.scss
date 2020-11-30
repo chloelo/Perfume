@@ -1,0 +1,8 @@
+.footer {
+  .nav-link {
+    color: $white;
+    &:hover {
+      color: darken($white, 15);
+    }
+  }
+}
