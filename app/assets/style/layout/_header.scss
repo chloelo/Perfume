@@ -50,3 +50,16 @@
     }
   }
 }
+.subav {
+  .subav-link {
+    font-size: 20px;
+    font-weight: 300;
+    margin-right: 30px;
+    padding-top: 14px;
+    padding-bottom: 14px;
+    color: $white;
+    &:hover {
+      color: darken($white, 10%);
+    }
+  }
+}

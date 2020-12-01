@@ -1,0 +1,15 @@
+.subscribe {
+  background: url("https://raw.githubusercontent.com/hexschool/webLayoutTraining1st/master/perfume-week6/index10.jpg")
+    no-repeat center / cover;
+  height: 600px;
+  .content {
+    margin-bottom: 112px;
+    width: 100%;
+    @include pad {
+      width: 50%;
+    }
+    @include desktop {
+      width: 33.333333%;
+    }
+  }
+}

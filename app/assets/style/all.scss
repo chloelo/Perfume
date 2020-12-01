@@ -5,7 +5,11 @@
 @import "./helpers/mixins";
 @import "./helpers/base";
 
+@import "components/card";
+
 @import "layout/header";
 @import "layout/footer";
+@import "layout/subscribe";
 
 @import "pages/index";
+@import "pages/products";

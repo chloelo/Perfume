@@ -66,19 +66,12 @@
 .list-selected {
   background-color: #e0e0e0;
   .img-wrap {
-    overflow: hidden;
     min-height: 350px;
-
     @include desktop {
       height: 540px;
     }
   }
-  .card-img-top {
-    object-fit: cover;
-    width: 100%;
-    height: 100%;
-    transition: all 0.5s;
-  }
+
   .sold-out {
     position: relative;
     &::before {
@@ -102,13 +95,5 @@
   }
   .card {
     background-color: transparent;
-    &:hover {
-      .card-img-top {
-        transform: scale(1.2);
-      }
-    }
-  }
-  .stretched-link {
-    color: $black;
   }
 }
